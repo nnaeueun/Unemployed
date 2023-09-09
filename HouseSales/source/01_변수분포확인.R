@@ -102,7 +102,7 @@ plot(ds.ord.int$YearBuilt, ds.ord.int$TotalBsmtSF,xlim=c(1990,2020), ylim=c(200,
 yR <- ds$YearRemodAdd - ds$YearBuilt
 mean(yR) # 13.59795년 뒤에 리모델링을 한다.
 
-barplot(table(yR))
+barplot(table(yR[yR>1]))
 
 which(yR>100)
 ds[1138,]
@@ -114,7 +114,6 @@ boxplot(yR)
 barplot(table)
 
 a <- ds$YrSold - ds$YearRemodAdd
-boxplot(a)
 
 ##
 
