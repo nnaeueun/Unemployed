@@ -62,5 +62,7 @@ cor(ds$SalePrice, ds$YearBuilt, method='spearman')
 hist(ds.int$GarageArea, col='royalblue', main = 'GarageArea')
 barplot(table(ds$MoSold), col='royalblue', main = 'MoSold', border=NA)
 # 상관계수
-cor(ds.int, method = 'spearman')
+cor.mat <- cor(ds.int, method = 'spearman')
+corrplot(cor(ds.int, method = 'spearman'),order='hclust')
+
 
